@@ -25,8 +25,9 @@ for filas in rutas_nodo.iterrows():
                 filas[1]["destino"],
                 peso=filas[1]["peso"])
 DG.nodes(data=True)
-
-dijkstra=list(nx.dijkstra_path(DG,source="21",target="1",weight="peso"))
+origen="21"
+destino="1"
+dijkstra=list(nx.dijkstra_path(DG,source=origen,target=destino,weight="peso"))
 print(dijkstra)
 datos = datos_nodo.loc["21"]["estacion"]
 def ruta(ruta):
