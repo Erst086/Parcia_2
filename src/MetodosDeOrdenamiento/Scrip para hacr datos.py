@@ -10,7 +10,7 @@ import csv
 import random
 
 # Nombre del archivo CSV
-nombre_archivo = "datos_150k.csv"
+nombre_archivo = "datos_50.csv"
 
 # Abre el archivo CSV en modo escritura
 with open(nombre_archivo, mode='w', newline='') as archivo_csv:
@@ -24,8 +24,8 @@ with open(nombre_archivo, mode='w', newline='') as archivo_csv:
     escritor_csv.writeheader()
 
     # Genera un millón de filas de datos
-    for numero in range(1, 10000):
-        valor = random.randint(1, 2000000)
+    for numero in range(1, 50):
+        valor = random.randint(1, 100)
         escritor_csv.writerow({'numero': numero, 'valor': valor})
 
 print(f"Se ha generado el archivo CSV '{nombre_archivo}' con N numero de datos.")
