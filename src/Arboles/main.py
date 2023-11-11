@@ -8,8 +8,8 @@ Created on Mon Sep 25 18:37:26 2023
 from arbol import arbol
 ar = arbol()
 if __name__ == "__main__":
-    estado_inicial=[1,3,2,4]
-    solucion=[2,1,3,4]
+    estado_inicial=[2,3,6,4,5,1]
+    solucion=[1,2,3,4,5,6]
     nodo_solucion=ar.busqueda_amplitud(estado_inicial,solucion)
     resultado=[]
     nodo=nodo_solucion
@@ -19,4 +19,6 @@ if __name__ == "__main__":
     resultado.append(estado_inicial)
     resultado.reverse()
     print(resultado)
+
+
     
