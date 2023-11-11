@@ -11,12 +11,14 @@ Created on Sat Oct  7 15:30:41 2023
 # Meodo Burbuja
 
 def metodo_burbuja(lista):
-    for i in range(1,len(lista)):
-        for j in range(0,len(lista)-1):
-            if(lista[j]>lista[j+1]):
-                aux=lista[j]
-                lista[j]=lista[j+1]
-                lista[j+1]=aux
+    n = len(lista)
+    for i in range(0, n - 1):
+        for j in range(0, n - 1 - i):
+            if lista[j] > lista[j + 1]:
+                aux = lista[j]
+                lista[j] = lista[j + 1]
+                lista[j + 1] = aux
+
 """_________________________________________________________________________"""
 
 # Metodo Insercion

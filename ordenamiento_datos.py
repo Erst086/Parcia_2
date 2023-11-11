@@ -13,7 +13,7 @@ import pandas as pd
 Los archivos de lectura son datos_150k que contiene 150000 datos
 
 """
-"""_________________________Metodos en general______________________________""" 
+"""__________________________Llamada y letura_______________________________""" 
 def leer_csv_obtener_valores(nombre_archivo):
     try:
         # Leer el archivo CSV en un DataFrame de Pandas
@@ -26,6 +26,10 @@ def leer_csv_obtener_valores(nombre_archivo):
     except FileNotFoundError:
         print(f"El archivo '{nombre_archivo}' no fue encontrado.")
         return []
+
+
+"""_________________________Metodos en general______________________________"""
+
 
 def ordenar_y_guardar_csv(metodo_ordenamiento, nombre_archivo_entrada, nombre_archivo_salida):
     # Leer el archivo CSV y obtener los valores
@@ -58,7 +62,7 @@ nombre_archivo_salida = "datos_ordenados_seleccion.csv"
 ordenar_y_guardar_csv(metodos_ordenamientos.metodo_seleccion, nombre_archivo_entrada, nombre_archivo_salida)
 
 
-"""_______________________Metodo para mezcla _______________________________""" 
+
 
 def leer_csv_obtener_valores_M(nombre_archivo):
     try:
@@ -83,7 +87,6 @@ df_ordenado.to_csv(nombre_archivo_ordenado, index=False)
 print(f"Valores ordenados con 'metodo_mezcla' guardados en'{nombre_archivo_ordenado}'")
 
 
-"""_______________________Metodo para QuickShort ___________________________"""
 
 
 def leer_csv_obtener_valores_QKS(nombre_archivo):
@@ -107,6 +110,4 @@ nombre_archivo_ordenado = "datos_ordenados_quickshort.csv"
 df_ordenado.to_csv(nombre_archivo_ordenado, index=False)
 
 print(f"Valores ordenados con 'metodo_quickshort' guardados en'{nombre_archivo_ordenado}'")
-
-
 
